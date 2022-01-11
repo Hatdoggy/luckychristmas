@@ -110,7 +110,7 @@ export const Svg = (props)=>{
           <path d="M413.434 486.401C372.877 486.401 340 453.523 340 412.966C340 372.409 372.877 339.531 413.434 339.531C453.992 339.531 486.869 372.409 486.869 412.966C486.869 453.523 453.992 486.401 413.434 486.401Z" fill="#FFC327" />
         </g>
       </g>
-      <g id="spinBtn" className="cursor pulse" onClick={stat.ctr === 3?click:undefined}>
+      <g id="spinBtn" className="cursor pulse" onClick={stat.clk?click:undefined}>
         <g id="Vector_12" filter="url(#filter1_d_149_467)">
           <path d="M413.434 451.884C391.947 451.884 374.516 434.453 374.516 412.967C374.516 391.48 391.947 374.049 413.434 374.049C434.921 374.049 452.352 391.48 452.352 412.967C452.352 434.453 434.921 451.884 413.434 451.884Z" fill="white" />
         </g>

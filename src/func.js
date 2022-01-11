@@ -56,13 +56,14 @@ const delay = ()=>{
   })
 }
 
-let count = 1;
 
 function spin() {
   let wheel = document.querySelector("#spinner");
   let ret = undefined;
-  switch (count) {
+
+  switch (window.count) {
     case 1:
+      console.log("Here")
       wheel.classList.add("spinAround");
       ret = new Promise((res) => {
         setTimeout(res, 7000);
@@ -74,14 +75,20 @@ function spin() {
         setTimeout(res, 7000);
       });
       break;
-    default:
+    case 3:
       wheel.classList.add("spinAround3");
       ret = new Promise((res) => {
         setTimeout(res, 7000);
       });
-      break;
+      break;      
+    default:
+      wheel.classList.add("spinAround4");
+      ret = new Promise((res) => {
+        setTimeout(res, 7000);
+      });
+      break;  
   }
-  count++;
+  window.count++;
   return ret;
 }
 

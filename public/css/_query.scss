@@ -22,6 +22,14 @@
   }
   .startBg{
     overflow: hidden;
+    .top,.bot{
+      width: 50%!important;
+    }
+    div{
+      img{
+        width: 80%!important;
+      }
+    }
   }
   .pop{
     width: 75%!important;
@@ -49,8 +57,10 @@
   }
 
   .comments{
+    width: 100%!important;
+    height: 100%!important;
     justify-content: initial!important;
-    margin-top: 2%;
+    // margin-top: 2%;
     overflow-y: scroll;
     .headCom,.comCont{
       width: 90%!important;
@@ -69,6 +79,7 @@
       }
     }
   }
+
 }
 
 @media (max-width: 481px) {
@@ -116,6 +127,9 @@
 
   .startBg{
     overflow: hidden;
+    img{
+      width: 80%!important;
+    }
   }
   .pop{
     width: 95%!important;

@@ -29,7 +29,7 @@ const Main = (props)=>{
         <Greet stat={stat} set={set}/>    
         :
         <div className="flx flx-col flx-jc-sa flx-ai-ce h-100">
-            <div className="w-80 flx flx-jc-strt flx-ai-ce">
+            <div className="w-80 flx flx-jc-strt flx-ai-ce fade-t">
                 <img src="./brand/comments.svg" alt="comments" className="w-10 cursor com fade-l" onClick={showCom}/>
             </div>
             <Svg stat={stat} set={set}/>

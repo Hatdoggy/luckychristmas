@@ -11,25 +11,19 @@ export const BgGrn = (props)=>{
 
     useEffect(() => {
         setTimeout(async()=>{
-            setShow(true)
             await delay();
-            setShow(false)
-            setLoad(true)
-            await delay();
-            await hideBg();
             set(true)
         },1000)
     }, [])
 
     return <div className="h-vh pos-rel bg-red flx flx-jc-ce flx-ai-ce startBg over-hide">
-        {/* <img src="./img/topHide.png" alt="top" className="pos-abs top fade-t"/>
-            {show&&<h1 className="mas txt-wht w-30 txt-al-ce fade">{start}</h1>}
-            {load&&
-                <div className="flx flx-col flx-jc-ce flx-ai-ce w-100 h-100 fade z-top">
-                    <img src="./img/christ7.png" alt="gift" className="w-5 gift"/>
-                    <h4 className="mas txt-wht w-30 txt-al-ce fade">{window.txt.load}</h4>
-                </div>
-            }
-        <img src="./img/hideMe.png" alt="bot" className="pos-abs bot fade-b"/> */}
+        <img src="./brand/intro-coles.png" alt="coles-t" className="top pos-abs fade-r"/>
+        <img src="./brand/intro-coles.png" alt="coles-b" className="bot pos-abs fade-l"/>
+
+        <div className="flx flx-col flx-jc-ce flx-ai-ce w-100 h-100 fade z-top strt">
+            <img src="./brand/intro.png" alt="intro" className="w-50 gift fade"/>
+            <h4 className="mont txt-wht w-30 txt-al-ce fade">{window.txt.load}</h4>
+        </div>
+
     </div>
 }
