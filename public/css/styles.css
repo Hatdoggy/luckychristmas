@@ -618,8 +618,13 @@ span {
   color: white;
 }
 
+.btn-wht {
+  background-color: white;
+  color: #D83816 !important;
+}
+
 .btn-red {
-  background-color: #FF423D;
+  background-color: #D83816;
   color: white;
 }
 
@@ -673,7 +678,7 @@ span {
 }
 
 .bg-img {
-  background-image: url("../img/bg.png");
+  background-image: url("../brand/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -685,19 +690,19 @@ span {
 }
 
 .bg-grad {
-  background: radial-gradient(50% 50% at 50% 50%, #5B935B 0%, #437943 100%), linear-gradient(255.09deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0.32) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #F83A11 0%, #D03716 100%);
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
   border-radius: 15px;
 }
 
 .bg-red {
-  background-color: #FF423D;
+  background-color: #D83816;
   padding: 20px;
 }
 
 .bg-grn {
-  background-color: #5A915A;
+  background-color: #FFC327;
   padding: 20px;
 }
 

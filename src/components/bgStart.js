@@ -21,8 +21,8 @@ export const BgGrn = (props)=>{
         },1000)
     }, [])
 
-    return <div className="h-vh pos-rel bg-img2 flx flx-jc-ce flx-ai-ce startBg over-hide">
-        <img src="./img/topHide.png" alt="top" className="pos-abs top fade-t"/>
+    return <div className="h-vh pos-rel bg-red flx flx-jc-ce flx-ai-ce startBg over-hide">
+        {/* <img src="./img/topHide.png" alt="top" className="pos-abs top fade-t"/>
             {show&&<h1 className="mas txt-wht w-30 txt-al-ce fade">{start}</h1>}
             {load&&
                 <div className="flx flx-col flx-jc-ce flx-ai-ce w-100 h-100 fade z-top">
@@ -30,6 +30,6 @@ export const BgGrn = (props)=>{
                     <h4 className="mas txt-wht w-30 txt-al-ce fade">{window.txt.load}</h4>
                 </div>
             }
-        <img src="./img/hideMe.png" alt="bot" className="pos-abs bot fade-b"/>
+        <img src="./img/hideMe.png" alt="bot" className="pos-abs bot fade-b"/> */}
     </div>
 }

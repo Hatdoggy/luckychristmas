@@ -378,6 +378,10 @@
     background-color: $ylw;
     color: $wht;
   }
+  &-wht{
+    background-color: $wht;
+    color: $red!important;
+  }
   &-red {
     background-color: $red;
     color: $wht;
@@ -428,7 +432,7 @@
     background: rgba(58, 58, 58, 0.5);
   }
   &-img {
-    background-image: url("../img/bg.png");
+    background-image: url("../brand/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
