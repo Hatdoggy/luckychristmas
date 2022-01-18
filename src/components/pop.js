@@ -23,24 +23,24 @@ const Start = (props)=>{
             },1250)
     }
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t targ pop">
-        <h4 className="mas txt-al-ce">{head}</h4>
+    return <div className="bg-red w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t targ pop">
+        <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./img/greet.png" alt="welcome"/>
+        <img src="./imgCnd/start.png" alt="welcome"/>
 
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
-            <p className="mas txt-wht">{bal.label}</p>
+            <p className="mont txt-wht">{bal.label}</p>
             <p className="lato txt-wht m-l-auto">{window.txt.currency}{stat.bal}</p>
         </div>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
-            <p className="mas txt-wht">{spins.label}</p>
+            <p className="mont txt-wht">{spins.label}</p>
             <p className="lato txt-wht m-l-auto">{stat.ctr}</p>
         </div>
 
-        <button className="btn btn-red mas" onClick={click}>{btn}</button>
+        <button className="btn btn-wht mont" onClick={click}>{btn}</button>
 
     </div>
 }
@@ -50,24 +50,24 @@ const Win = (props)=>{
     const {stat,set} =props;
     const {head,mes,btn} = win;
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
-        <h4 className="mas txt-al-ce">{head}</h4>
+    return <div className="bg-red w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
+        <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./img/winImg.png" alt="win" className="w-70"/>
+        <img src="./imgCnd/win.png" alt="win" className="w-70"/>
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
-            <p className="mas txt-wht">{bal.label}</p>
+            <p className="mont txt-wht">{bal.label}</p>
             <p className="lato txt-wht m-l-auto">{window.txt.currency}{stat.bal}</p>
         </div>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
-            <p className="mas txt-wht">{spins.label}</p>
+            <p className="mont txt-wht">{spins.label}</p>
             <p className="lato txt-wht m-l-auto">{stat.ctr}</p>
         </div>
         
         {/* Data product button  */}
-        <button className="mas btn btn-ylw exit-button"
+        <button className="mont btn btn-wht exit-button"
           data-product-id="1"
           onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{btn}</button>
     </div>
@@ -126,23 +126,23 @@ const Lose = (props)=>{
         }
     }
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
-        <h4 className="mas txt-al-ce">{head}</h4>
+    return <div className="bg-red w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
+        <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./img/loseImg.png" alt="lose"/>
+        <img src="./imgCnd/lose.png" alt="lose"/>
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
-            <p className="mas txt-wht">{bal.label}</p>
+            <p className="mont txt-wht">{bal.label}</p>
             <p className="lato txt-wht m-l-auto">{window.txt.currency}{stat.bal}</p>
         </div>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
-            <p className="mas txt-wht">{spins.label}</p>
+            <p className="mont txt-wht">{spins.label}</p>
             <p className="lato txt-wht m-l-auto">{stat.ctr}</p>
         </div>        
 
-        <button className="mas btn btn-red" onClick={click}>{btn}</button>
+        <button className="mont btn btn-wht" onClick={click}>{btn}</button>
     </div>
 }
 
