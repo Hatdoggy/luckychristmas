@@ -39,8 +39,8 @@ function App() {
 
   return (
     start?
-    <div className="App w-100 h-100 pos-rel">
-      <canvas className="webgl"></canvas>
+    <div className="App flx flx-ai-ce flx-jc-ce w-100 h-100 pos-rel">
+      {/* <canvas className="webgl"></canvas> */}
       {stat.show&&<Pop stat={stat} set={setStat} mobile={mobile}  setMob={setMob}/>}
       {showCom&&<Comments set={setCom}/>}
       <Main stat={stat} set={setStat} mobile={mobile} mob={mob} setCom={setCom}/>

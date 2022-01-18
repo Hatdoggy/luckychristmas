@@ -1,7 +1,7 @@
 import { Greet } from "./greet"
 import { Svg } from "./svg"
 import { useState,useEffect} from "react"
-import { three } from "../three";
+// import { three } from "../three";
 
 const Terms = ()=>{
 
@@ -16,9 +16,9 @@ const Main = (props)=>{
 
     const {stat,set,mobile,mob,setCom} = props;
 
-    useEffect(() => {
-        three();
-    }, [])
+    // useEffect(() => {
+    //     three();
+    // }, [])
 
     const showCom = ()=>{
         setCom(true);

@@ -25,10 +25,10 @@ const Start = (props)=>{
             },1250)
     }
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t targ pop">
+    return <div className="bg-red w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t targ pop">
         <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./brand/intro.png" alt="welcome" className="w-50"/>
+        <img src="./imgCnd/start.png" alt="welcome" className="w-50"/>
 
         <p className="lato w-80 txt-al-ce">{mes}</p>
         
@@ -131,7 +131,7 @@ const Win = (props)=>{
             ndx = ndx+1;
     }   
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
+    return <div className="bg-red w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
         <h4 className="mont txt-al-ce">{current!==5?window.img[ndx].head:head}</h4>
 
         {current!==5?
@@ -151,23 +151,9 @@ const Win = (props)=>{
         </div>
         
         {/* Data product button  */}
-        {/* <button className="mont btn btn-wht exit-button"
+        <button className="mont btn btn-wht exit-button"
           data-product-id="1"
-          onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{btn}</button> */}
-
-          {current !== 5?
-            <button className="mont btn btn-wht" onClick={click}>{btn}</button>
-            :
-          <div className="flx flx-col flx-jc-sa flx-ai-ce w-100">
-            <button className="mont btn btn-wht exit-button"
-             data-product-id="1"
-             onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{fin.btn1}</button>
-
-            <button className="mont btn btn-wht exit-button m-t-5"
-            data-product-id="2"
-            onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{fin.btn2}</button>  
-          </div>              
-          }
+          onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{btn}</button>
     </div>
 }
 
@@ -205,10 +191,10 @@ const Lose = (props)=>{
         },1000)
     }
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
+    return <div className="bg-red w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
         <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./brand/lose.png" alt="lose"/>
+        <img src="./imgCnd/lose.png" alt="lose"/>
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">

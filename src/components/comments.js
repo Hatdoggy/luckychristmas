@@ -25,9 +25,9 @@ const Comments = (props)=>{
                 <div key={ndx} className={`comment w-30 h-50 m-t-2 m-b-2 flx flx-jc-ce flx-ai-ce brd ${ndx%2 === 0? "m-r-2 m-l-2 bg-red":" bg-grn"}`}>
                     <img src={elem.src} alt={elem.alt} className="w-30"/>
                     <div className="flx flx-col flx-jc-sa w-70 m-l-5">
-                        <p className="mont txt-wht txt-al-l">{elem.name}</p>
-                        <small className="lato txt-wht txt-al-l">{elem.time}</small>
-                        <p className="lato txt-wht txt-al-l">{elem.mes}</p>
+                        <p className={`mont txt-al-l ${ndx%2 === 0 ?"txt-wht":"txt-red"}`}>{elem.name}</p>
+                        <small className={`lato txt-al-l ${ndx%2 === 0 ?"txt-wht":"txt-red"}`}>{elem.time}</small>
+                        <p className={`lato txt-al-l ${ndx%2 === 0 ?"txt-wht":"txt-red"}`}>{elem.mes}</p>
                     </div>
                 </div>
             ))}
