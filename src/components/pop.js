@@ -164,7 +164,7 @@ const Win = (props)=>{
              onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{fin.btn1}</button>
 
             <button className="mont btn btn-wht exit-button m-t-5"
-            data-product-id="1"
+            data-product-id="2"
             onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{fin.btn2}</button>  
           </div>              
           }
