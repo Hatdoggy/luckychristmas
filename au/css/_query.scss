@@ -1,0 +1,161 @@
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  small {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .exit{
+    width: 5%!important;
+  }
+
+  button {
+    width: 80% !important;
+  }
+  .popUp,
+  .popCont {
+    width: 80% !important;
+  }
+  .startBg{
+    overflow: hidden;
+    .top,.bot{
+      width: 50%!important;
+    }
+    div{
+      img{
+        width: 80%!important;
+      }
+    }
+  }
+  .pop{
+    width: 75%!important;
+    div{
+      width: 90%!important;
+    }
+  }
+
+  svg{
+    width: 90%!important;
+  }
+
+  section{
+    width: 100%!important;
+    .bg-grad{
+      width: 95%!important;
+      img{
+        width: 50%!important;
+      }
+    }
+  }
+
+  .gift{
+    width: 30%!important;
+  }
+
+  .comments{
+    width: 100%!important;
+    height: 100%!important;
+    justify-content: initial!important;
+    // margin-top: 2%;
+    overflow-y: scroll;
+    .headCom,.comCont{
+      width: 90%!important;
+    }
+    .comCont{
+      flex-direction: column;
+      .comment{
+        width: 100%!important;
+        height: auto!important;
+        p,small{
+          text-align: left!important;
+        }
+        img{
+          width: 25%;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 481px) {
+
+  .gift{
+    width: 15%!important;
+    margin-bottom: 5%!important;
+  }
+
+  .comments{
+    justify-content: initial!important;
+    margin-top: 2%;
+    overflow-y: scroll;
+    .headCom,.comCont{
+      width: 90%!important;
+    }
+    .comCont{
+      flex-direction: column;
+      .comment{
+        width: 100%!important;
+        height: auto!important;
+        p,small{
+          text-align: left!important;
+        }
+        img{
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  small {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .exit{
+    width: 5%!important;
+  }
+
+  .startBg{
+    overflow: hidden;
+    img{
+      width: 80%!important;
+    }
+  }
+  .pop{
+    width: 95%!important;
+  }
+
+  svg{
+    width: 90%!important;
+  }
+
+  section{
+    width: 100%!important;
+    .bg-grad{
+      width: 95%!important;
+      img{
+        width: 50%!important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1000px) and (orientation: landscape) {
+}
+
+/* Portrait IPAD */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+}
+
+@media only screen and (min-width: 1400px) {
+}

@@ -2,42 +2,153 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="Canadian Spinner"
+      content=""
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="text/javascript">
+      var month= ["January","February","March","April","May","June","July",
+            "August","September","October","November","December"];
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = month[today.getMonth()];
+      var yyyy = today.getFullYear();
+      today = mm + ' ' + dd + ' ' + yyyy;
+
+      window.txt = {
+        start:"Merry Christmas",
+        pop:{
+          start:{
+            head:"WELCOME TO THE CANADIAN SPINNER",
+            mes:"Holidays might've ended but giving and sharing lasts all year long! We have reserved spins for you - Spin to see if you win or lose!",
+            bal:{
+              label:"Bank",
+              val:150
+            },
+            spins:{
+              label:"Spins Left",
+              val:3              
+            },
+            btn:"Let’s have fun!",
+          },
+          loss:{
+            head:"Oh No You Lost!",
+            mes:"Don't worry these animals are here to help on your next spin. Click the button to try again",
+            btn:"Try Again"
+          },
+          win:{
+            head:"CONGRATULATIONS YOU WON!",
+            mes:"You did it! You won $2500 with the help of those friendly Canadian animals. Click one of the buttons to receive the prize you wish to have",
+            btn:"Claim Prize!",    
+          }
+        },
+        currency:"",
+        comment:{
+            head:"Winners Comments",
+            comments:[
+              {
+                name:"Friedrich Donnel Newmann",
+                time:"2 hours ago",
+                mes:"I received the 5 Free Spins!!! Love to play!! I won $131 this weekend thanks so much! ",
+                src:"./imgCnd/user1.png",
+                alt:"christ1"
+              },
+              {
+                name:"Barbara Banisa",
+                time:"15 mins ago",
+                mes:"I won around 1500 with the free spins but then i lost around 700 and withdraw the rest.",
+                src:"./imgCnd/user2.png",
+                alt:"christ2"
+              },
+              {
+                name:"Sandra Lee",
+                time:"10 mins ago",
+                mes:"I won and now I know what to do in the weekend.",
+                src:"./imgCnd/user3.png",
+                alt:"christ3"
+              },
+              {
+                name:"Eliza Goodridge",
+                time:"2 mins ago",
+                mes:"A bit boring! Maybe because i only won $50!!! GIVE ME MORE FREE SPINS!",
+                src:"./imgCnd/user4.png",
+                alt:"christ4"
+              },
+              {
+                name:"Bill Frizzle",
+                time:"30 secs ago",
+                mes:"I used my free spins and won the biggest welcome bonus so i had to use it!",
+                src:"./imgCnd/user5.png",
+                alt:"christ5"
+              },
+              {
+                name:"Jacob Francis",
+                time:"45 mins ago",
+                mes:"I can't believe I finally won something in my 25 years being alive! I won money and more spins I can't believe this!",
+                src:"./imgCnd/user6.png",
+                alt:"christ6"
+              },
+            ]
+        },
+        main:{
+          head:"Your Free Spins are valid until end of "+today+".",
+          greet:"We have reserved 3 FREE Spins for the 3 winners today!",
+          mes:"Spins are reserved for for 72 hours from you enter this page! We wish you good luck with your spins and thanks for participating!",
+          congrats:"A total of $3,994 has been won today!"
+        },
+        terms:"This is a advertisement page done by a third party advertiser and NOT the casino promoted. You must be 18 or older (or the legal age of gambling in your state) to use our page. Also you must accept we use cookies to enrich your experience.",
+        load:"This is a great place to win some cash!"
+      };
+
+      window.count = 1;
+      window.ndx = 0;
+
+      window.img = [
+        {
+          src:"./brand/prize3.png",
+          alt:"free spins",
+          head:"Another Chance!",
+          mes:"You have received a free extra spin! Click the button to use your free spin and win",
+        },
+        {
+          src:"./brand/prize1.png",
+          alt:"gift card",
+          head:"Amazing you won!",
+          mes:"You have received a Coles gift card with an extra free spin! Click the button to use your free spin and win",
+        },
+        {
+          src:"./brand/prize2.png",
+          alt:"Iphone13",
+          head:"Amazing you won!",
+          mes:"Congratulations! You have received a new Iphone 13",
+        },
+      ]
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/CSSRulePlugin.min.js" integrity="sha512-1z2hYE5HWzZW8cAJRhlwT472AGZC3HlJyWYmW3SXG/Qh0S6TFdkYEqJaPwT7eCy9tI4KvwrRVK6IGqtqErpHQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Canadian Spinner</title>
   </head>
-  <body>
+  <body class="h-vh ovr-hide bg-img">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="root" class="h-100 w-100"></div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <script>
+      function plushLoaded() {
+        if (!window.plushExecuted) {
+          window.plushExecuted = true;
+          window.Plush && window.Plush.runFlow('https://g.mustangeight.com/', {
+          'campaign:id': '',
+          'country:locale': 'CA',
+           });
+        }
+      };
+     </script>
+     <script src="https://g.mustangeight.com/embed.js" onload="setTimeout(plushLoaded, 7500)" async></script>
+     
   </body>
 </html>
