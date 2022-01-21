@@ -694,13 +694,7 @@ span {
 }
 
 .bg-img {
-  background-image: url("../imgCnd/bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.bg-img2 {
-  background-image: url("../img/bgGrn.png");
+  background-image: url("../imgCnd/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -714,10 +708,10 @@ span {
 
 .bg-red {
   background-color: #DD2E2E;
-  padding: 20px;
-  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
-          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
-  border-radius: 15px;
+}
+
+.bg-wht {
+  background-color: white;
 }
 
 .bg-grn {
@@ -968,6 +962,23 @@ span {
   small {
     text-align: center !important;
     width: 100% !important;
+  }
+  h1 {
+    font-size: clamp(2.5rem, 7vw, 7rem);
+  }
+  h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+  h4 {
+    font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+  }
+  p,
+  button {
+    font-size: clamp(1rem, 1.1vw, 1.3rem);
+  }
+  small {
+    font-size: clamp(0.6rem, 0.75rem, 1rem);
+    line-height: 1.5;
   }
   .exit {
     width: 5% !important;
