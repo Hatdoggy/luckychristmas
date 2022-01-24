@@ -30,16 +30,16 @@ const Main = (props)=>{
         :
         <div className="flx flx-col flx-jc-sa flx-ai-ce h-100">
             <div className="w-80 flx flx-jc-strt flx-ai-ce fade-t">
-                <img src="./imgAus/comments.svg" alt="comments" className="w-10 cursor com fade-l" onClick={showCom}/>  
+                <img src="./imgCnd/comments.svg" alt="comments" className="w-10 cursor com fade-l" onClick={showCom}/>  
             </div>
             <Svg stat={stat} set={set}/>
             <Terms/>
         </div>
     :
-    <main className="w-100 h-100 flx flx-jc-ce flx-ai-ce ">
+    <main className="w-100 h-100 flx flx-jc-ce flx-ai-ce">
         <div className="flx flx-col flx-jc-ce flx-ai-ce h-100 w-50">
             <div className="w-80 flx flx-jc-strt flx-ai-ce">
-                <img src="./imgAus/comments.svg" alt="comments" className="w-10 cursor com fade-l" onClick={showCom}/>  
+                <img src="./imgCnd/comments.svg" alt="comments" className="w-10 cursor com fade-l" onClick={showCom}/>  
             </div>
             <Svg stat={stat} set={set}/>
             <Terms/>

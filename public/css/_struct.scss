@@ -376,9 +376,6 @@
   &-red {
     color: #f04a48;
   }
-  &-blu{
-    color: $blue;
-  }
 }
 
 /* button*/
@@ -395,7 +392,7 @@
   }
   &-wht{
     background-color: $wht;
-    color: $blue!important;
+    color: $red!important;
   }
   &-red {
     background-color: $red;
@@ -426,10 +423,6 @@
   &-50 {
     border-radius: 50px;
   }
-  &-ln{
-    border: 1px solid $wht;
-    border-radius: 15px;
-  }
 }
 
 /* shadow */
@@ -451,7 +444,7 @@
     background: rgba(58, 58, 58, 0.5);
   }
   &-img {
-    background-image: url("../imgAus/bg.jpg");
+    background-image: url("../imgCnd/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -459,10 +452,6 @@
     background: $grad;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
     border-radius: 15px;
-  }
-  &-side{
-    background: rgba(41, 41, 41, 0.45);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   }
   &-red{
     background-color: $red;
@@ -474,10 +463,7 @@
     background-color: $wht;
     padding: 20px;
   }
-  &-blu{
-    background-color: $blue;
-    border-radius: 15px;
-  }
+  
 }
 
 /* Animation */
