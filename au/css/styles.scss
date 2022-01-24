@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@700&family=Mountains+of+Christmas:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600;700&family=Lato:wght@300;400&display=swap');
 @import "_var";
 @import "_def";
 @import "_struct";
@@ -17,9 +17,11 @@
 
 .mont {
   font-family: $mont;
+  font-weight: 700;
 }
 .lato {
   font-family: $lato;
+  font-weight: 300;
 }
 
 .mas{
@@ -143,19 +145,19 @@ small {
     transform: rotate(3109deg);
   }
   90% {
-    -webkit-transform: rotate(6212deg);
-    -ms-transform: rotate(6212deg);
-    transform: rotate(6212deg);
+    -webkit-transform: rotate(5815deg);
+    -ms-transform: rotate(5815deg);
+    transform: rotate(5815deg);
   }
   95% {
-    -webkit-transform: rotate(6209deg);
-    -ms-transform: rotate(6209deg);
-    transform: rotate(6209deg);
+    -webkit-transform: rotate(5804deg);
+    -ms-transform: rotate(5804deg);
+    transform: rotate(5804deg);
   }
   100% {
-    -webkit-transform: rotate(6210deg);
-    -ms-transform: rotate(6210deg);
-    transform: rotate(6210deg);
+    -webkit-transform: rotate(5805deg);
+    -ms-transform: rotate(5805deg);
+    transform: rotate(5805deg);
   }
 }
 .spinAround3 {
@@ -176,52 +178,19 @@ small {
     transform: rotate(0deg);
   }
   90% {
-    -webkit-transform: rotate(3210deg);
-    -ms-transform: rotate(3210deg);
-    transform: rotate(3210deg);
+    -webkit-transform: rotate(1805deg);
+    -ms-transform: rotate(1805deg);
+    transform: rotate(1805deg);
   }
   95% {
-    -webkit-transform: rotate(3199deg);
-    -ms-transform: rotate(3199deg);
-    transform: rotate(3199deg);
+    -webkit-transform: rotate(1799deg);
+    -ms-transform: rotate(1799deg);
+    transform: rotate(1799deg);
   }
   100% {
-    -webkit-transform: rotate(3200deg);
-    -ms-transform: rotate(3200deg);
-    transform: rotate(3200deg);
-  }
-}
-.spinAround4 {
-  -webkit-animation: spin4 6.6s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-@-webkit-keyframes spin4 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  90% {
-    -webkit-transform: rotate(3250deg);
-    -ms-transform: rotate(3250deg);
-    transform: rotate(3250deg);
-  }
-  95% {
-    -webkit-transform: rotate(3239deg);
-    -ms-transform: rotate(3239deg);
-    transform: rotate(3239deg);
-  }
-  100% {
-    -webkit-transform: rotate(3240deg);
-    -ms-transform: rotate(3240deg);
-    transform: rotate(3240deg);
+    -webkit-transform: rotate(1800deg);
+    -ms-transform: rotate(1800deg);
+    transform: rotate(1800deg);
   }
 }
 
