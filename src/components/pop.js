@@ -56,7 +56,7 @@ const Win = (props)=>{
         <img src="./imgNz/win.png" alt="win" className="w-70"/>
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
-        <div className="flx flx-jc-ce flx-ai-ce w-80">
+        {/* <div className="flx flx-jc-ce flx-ai-ce w-80">
             <p className="mont txt-wht">{bal.label}</p>
             <p className="lato txt-wht m-l-auto">{window.txt.currency}{stat.bal}</p>
         </div>
@@ -64,7 +64,7 @@ const Win = (props)=>{
         <div className="flx flx-jc-ce flx-ai-ce w-80">
             <p className="mont txt-wht">{spins.label}</p>
             <p className="lato txt-wht m-l-auto">{stat.ctr}</p>
-        </div>
+        </div> */}
         
         {/* Data product button  */}
         <button className="mont btn btn-wht exit-button"
