@@ -13,17 +13,19 @@ export const Svg = (props)=>{
                 ...stat,
                 show:true,
                 bal:bal-50,
-                ctr:ctr-1
+                ctr:ctr-1,
+                clk:false
             })
             let btn = document.querySelector('#spinBtn');
-            btn.classList.remove('pulse')
+            btn.classList.remove('pulse');
+            btn.style.transform = "scale(1)";
         },1000)
     }
 
     return (
 <div className="pos-rel w-80 fade-l h-100 flx flx-jc-ce flx-ai-ce">
-    <img src="./sample/spinner.png" alt="wheel" id="spinner" className="w-100 pos-abs z-bg"/>
-    <img src="./sample/btn.png" alt="wheel" id="spinBtn" className="cursor pulse" onClick={stat.clk?click:undefined}/>
+    <img src="./imgCnd/spinner.png" alt="wheel" id="spinner" className="w-100 pos-abs z-bg"/>
+    <img src="./imgCnd/btn.png" alt="wheel" id="spinBtn" className="cursor pulse" onClick={stat.clk?click:undefined}/>
 </div>
     )
 }
