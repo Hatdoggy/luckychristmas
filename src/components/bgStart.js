@@ -22,14 +22,15 @@ export const BgGrn = (props)=>{
 
         {show?
             <div className="flx flx-col flx-jc-ce flx-ai-ce w-100 h-100 fade z-top strt fade">
-                <h2 className="mont txt-wht w-30 txt-al-ce fade">{window.txt.load}</h2>
-                <img src="./imgAus/travel.png" alt="intro" className="w-20 gift fade"/>
+                <h2 className="mont txt-wht w-30 txt-al-ce fade brd-ln m-b-2">{window.txt.load}</h2>
+                <img src="./imgNz/travel.png" alt="intro" className="w-20 gift fade"/>
+                <h2 className="mont txt-wht w-30 txt-al-ce fade">{window.txt.loadMes}</h2>
             </div>
             :
             <div className="flx flx-col h-100 flx-jc-ce flx-ai-ce">
-                <img src="./imgAus/img1.png" alt="cnd1" className="fade-r"/>
-                <img src="./imgAus/img2.png" alt="cnd2" className="fade-l"/>
-                <img src="./imgAus/img3.png" alt="cnd3" className="fade-r"/>
+                <img src="./imgNz/img1.png" alt="cnd1" className="fade-r"/>
+                <img src="./imgNz/img2.png" alt="cnd2" className="fade-l m-t-2 m-b-2"/>
+                <img src="./imgNz/img3.png" alt="cnd3" className="fade-r"/>
             </div>
         }
 

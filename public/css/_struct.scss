@@ -429,6 +429,7 @@
   &-ln{
     border: 1px solid $wht;
     border-radius: 15px;
+    padding: 15px;
   }
 }
 
@@ -451,7 +452,7 @@
     background: rgba(58, 58, 58, 0.5);
   }
   &-img {
-    background-image: url("../imgAus/bg.jpg");
+    background-image: url("../imgNz/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }

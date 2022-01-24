@@ -26,7 +26,7 @@ const Start = (props)=>{
     return <div className="bg-blu w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t targ pop">
         <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./imgAus/start.png" alt="welcome"/>
+        <img src="./imgNz/start.png" alt="welcome"/>
 
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
@@ -53,7 +53,7 @@ const Win = (props)=>{
     return <div className="bg-blu w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
         <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./imgAus/win.png" alt="win" className="w-70"/>
+        <img src="./imgNz/win.png" alt="win" className="w-70"/>
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
@@ -129,7 +129,7 @@ const Lose = (props)=>{
     return <div className="bg-blu w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
         <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./imgAus/lose.png" alt="lose"/>
+        <img src="./imgNz/lose.png" alt="lose"/>
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">

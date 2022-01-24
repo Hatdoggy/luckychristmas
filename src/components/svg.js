@@ -24,8 +24,8 @@ export const Svg = (props)=>{
 
     return (
 <div className="pos-rel w-80 fade-l h-100 flx flx-jc-ce flx-ai-ce">
-    <img src="./imgAus/spinner.png" alt="wheel" id="spinner" className="w-100 pos-abs z-bg"/>
-    <img src="./imgAus/btn.png" alt="wheel" id="spinBtn" className="cursor pulse" onClick={stat.clk?click:undefined}/>
+    <img src="./imgNz/spinner.png" alt="wheel" id="spinner" className="w-100 pos-abs z-bg"/>
+    <img src="./imgNz/btn.png" alt="wheel" id="spinBtn" className="cursor pulse" onClick={stat.clk?click:undefined}/>
 </div>
     )
 }
