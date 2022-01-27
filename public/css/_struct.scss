@@ -379,6 +379,9 @@
   &-blu{
     color: $blue;
   }
+  &-grn{
+    color: $grn;
+  }
 }
 
 /* button*/
@@ -395,7 +398,7 @@
   }
   &-wht{
     background-color: $wht;
-    color: $blue!important;
+    color: $grn!important;
   }
   &-red {
     background-color: $red;
@@ -452,7 +455,7 @@
     background: rgba(58, 58, 58, 0.5);
   }
   &-img {
-    background-image: url("../imgNz/bg.jpg");
+    background-image: url("../imgSa/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -468,7 +471,7 @@
     background-color: $wht;
   }
   &-grn{
-    background-color: $wht;
+    background-color: $grn;
     padding: 20px;
   }
   &-blu{

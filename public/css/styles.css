@@ -625,6 +625,10 @@ span {
   color: #2C4E9E;
 }
 
+.txt-grn {
+  color: #007847;
+}
+
 /* button*/
 .btn {
   padding: 15px;
@@ -644,7 +648,7 @@ span {
 
 .btn-wht {
   background-color: white;
-  color: #2C4E9E !important;
+  color: #007847 !important;
 }
 
 .btn-red {
@@ -708,7 +712,7 @@ span {
 }
 
 .bg-img {
-  background-image: url("../imgNz/bg.jpg");
+  background-image: url("../imgSa/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -729,7 +733,7 @@ span {
 }
 
 .bg-grn {
-  background-color: white;
+  background-color: #007847;
   padding: 20px;
 }
 
