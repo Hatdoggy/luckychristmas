@@ -23,10 +23,10 @@ const Start = (props)=>{
             },1250)
     }
 
-    return <div className="bg-red w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t targ pop">
+    return <div className="bg-blu w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t targ pop">
         <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./imgCnd/start.png" alt="welcome"/>
+        <img src="./imgAus/start.png" alt="welcome"/>
 
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
@@ -50,13 +50,13 @@ const Win = (props)=>{
     const {stat,set} =props;
     const {head,mes,btn} = win;
 
-    return <div className="bg-red w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
+    return <div className="bg-blu w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
         <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./imgCnd/win.png" alt="win" className="w-70"/>
+        <img src="./imgAus/win.png" alt="win" className="w-70"/>
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
-        <div className="flx flx-jc-ce flx-ai-ce w-80">
+        {/* <div className="flx flx-jc-ce flx-ai-ce w-80">
             <p className="mont txt-wht">{bal.label}</p>
             <p className="lato txt-wht m-l-auto">{window.txt.currency}{stat.bal}</p>
         </div>
@@ -64,7 +64,7 @@ const Win = (props)=>{
         <div className="flx flx-jc-ce flx-ai-ce w-80">
             <p className="mont txt-wht">{spins.label}</p>
             <p className="lato txt-wht m-l-auto">{stat.ctr}</p>
-        </div>
+        </div> */}
         
         {/* Data product button  */}
         <button className="mont btn btn-wht exit-button"
@@ -126,10 +126,10 @@ const Lose = (props)=>{
         }
     }
 
-    return <div className="bg-red w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
+    return <div className="bg-blu w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
         <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./imgCnd/lose.png" alt="lose"/>
+        <img src="./imgAus/lose.png" alt="lose"/>
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
