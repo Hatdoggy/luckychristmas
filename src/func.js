@@ -25,17 +25,10 @@ let fluxf = getURLParameter("fluxf");
 let fluxffn = getURLParameter("fluxffn");
 
 function ActionRedirect(action) {
-  window.location.replace(
-    ffdomain +
-      "/?flux_action=" +
-      action +
-      "&flux_f=" +
-      fluxf +
-      "&flux_ffn=" +
-      fluxffn +
-      "&flux_sess=" +
-      session
-  );
+
+  let url = ffdomain + "/?flux_action=" + action + "&flux_f=" + fluxf + "&flux_ffn=" + fluxffn + "&flux_sess=" + session;
+  window.open(url,"_blank").focus();
+  
 }
 
 const hideBg = ()=>{
