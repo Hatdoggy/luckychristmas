@@ -1,9 +1,7 @@
-import { useEffect,useState } from "react";
 import { spin ,ActionRedirect} from "../func";
 
 const {start,loss,win} = window.txt.pop;
 const {bal,spins} = start;
-let ndx = window.ndx;
 
 const Start = (props)=>{
 
@@ -25,19 +23,24 @@ const Start = (props)=>{
             },1250)
     }
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t targ pop">
+    return <div className="bg-grn w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-drk p-20 fade-t targ pop">
         <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./brand/intro.png" alt="welcome" className="w-50"/>
+        <img src="./imgClove/start.png" alt="welcome"/>
 
         <p className="lato w-80 txt-al-ce">{mes}</p>
-        
+
         <div className="flx flx-jc-ce flx-ai-ce w-80">
-            <p className="mont txt-wht">{spins.label}</p>
-            <p className="lato txt-wht m-l-auto">{stat.ctr}</p>
+            <p className="mont txt-drk">{bal.label}</p>
+            <p className="lato txt-drk m-l-auto">{window.txt.currency}{stat.bal}</p>
         </div>
 
-        <button className="btn btn-wht mont" onClick={click}>{btn}</button>
+        <div className="flx flx-jc-ce flx-ai-ce w-80">
+            <p className="mont txt-drk">{spins.label}</p>
+            <p className="lato txt-drk m-l-auto">{stat.ctr}</p>
+        </div>
+
+        <button className="btn btn-grn mont" onClick={click}>{btn}</button>
 
     </div>
 }
@@ -45,129 +48,18 @@ const Start = (props)=>{
 const Win = (props)=>{
 
     const {stat,set} =props;
-    const {ctr} = stat;
-    const {head,mes,btn,fin} = win;
-    const current = window.count;
-    
+    const {head,mes,btn} = win;
 
-    useEffect(() => {
-        if(current !== 5){
-            set({
-                ...stat,
-                bal:bal-50, 
-                lose:false,
-                win:true,
-                show:true,
-            })  
+    return <div className="bg-grn w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-drk p-20 fade-t pop">
+        <h4 className="mont txt-al-ce">{head}</h4>
 
-            setTimeout(()=>{
-                set({
-                    ...stat,
-                    ctr:ctr+1, 
-                })  
-            },500)
-        }else{
-            set({
-                ...stat,
-                ctr:0,
-                bal:bal-50, 
-                lose:false,
-                win:true,
-                show:true,
-            })  
-        }
-    }, [])
-
-    const click =async()=>{ 
-
-            if(current === 3){
-                set({
-                    ...stat,
-                    ctr:ctr-1,
-                    bal:bal-50, 
-                    lose:false,
-                    win:true,
-                    show:false,
-                })
-    
-                await spin();
-    
-                setTimeout(()=>{
-                    set({
-                        ...stat,
-                        ctr:ctr-1,
-                        bal:bal-50,
-                        lose:false,
-                        win:true,
-                        show:true,
-                    })
-                },1000)
-            }
-            //gift card + free spin
-            else{
-                 set({
-                    ...stat,
-                    ctr:ctr-1,
-                    bal:bal-50, 
-                    lose:false,
-                    win:true,
-                    show:false,
-                })
-    
-                await spin();
-    
-                setTimeout(()=>{
-                    set({
-                        ...stat,
-                        ctr:ctr-1,
-                        bal:bal-50,
-                        lose:false,
-                        win:true,
-                        show:true,
-                    })
-                },1000)               
-            }
-
-            ndx = ndx+1;
-    }   
-
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
-        <h4 className="mont txt-al-ce">{current!==5?window.img[ndx].head:head}</h4>
-
-        {current!==5?
-            <img src={`${window.img[ndx].src}`} alt={`${window.img[ndx].alt}`} className="w-30"/>
-            :
-            <div className="flx flx-jc-ce flx-ai-ce w-100"> 
-                <img src="./brand/prize1.png" alt="gift card" className="w-30"/>
-                <img src="./brand/prize3.png" alt="free spins" className="w-15 m-l-5 m-r-5"/>
-                <img src="./brand/prize2.png" alt="iphone 13" className="w-30"/>
-            </div>
-        }
-        <p className="lato w-80 txt-al-ce">{current!==5?window.img[ndx].mes:mes}</p>
-
-        <div className="flx flx-jc-ce flx-ai-ce w-80">
-            <p className="mont txt-wht">{spins.label}</p>
-            <p className="lato txt-wht m-l-auto">{stat.ctr}</p>
-        </div>
+        <img src="./imgClove/win.png" alt="win" className="w-70"/>
+        <p className="lato w-80 txt-al-ce">{mes}</p>
         
         {/* Data product button  */}
-        {/* <button className="mont btn btn-wht exit-button"
+        <button className="mont btn btn-grn exit-button"
           data-product-id="1"
-          onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{btn}</button> */}
-
-          {current !== 5?
-            <button className="mont btn btn-wht" onClick={click}>{btn}</button>
-            :
-          <div className="flx flx-col flx-jc-sa flx-ai-ce w-100">
-            <button className="mont btn btn-wht exit-button"
-             data-product-id="1"
-             onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{fin.btn1}</button>
-
-            <button className="mont btn btn-wht exit-button m-t-5"
-            data-product-id="1"
-            onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{fin.btn2}</button>  
-          </div>              
-          }
+          onClick={(elem) => ActionRedirect(elem.target.dataset.productId)}>{btn}</button>
     </div>
 }
 
@@ -175,48 +67,72 @@ const Lose = (props)=>{
 
     const {stat,set} =props;
     const {head,mes,btn} = loss;
-    const current = window.count;
     
     const click =async()=>{
 
         
         const {ctr,bal} = stat;
 
-        set({
-            ...stat,
-            ctr:ctr-1,
-            bal:2500,
-            lose:false,
-            win:true,
-            show:false
-        })
+        if(ctr >1){
+            set({
+                ...stat,
+                ctr:ctr-1,
+                bal:bal-50,
+                show:false,
+            })
 
-        await spin();
+            await spin();
 
-        setTimeout(()=>{
+            setTimeout(()=>{
+                set({
+                    ...stat,
+                    ctr:ctr-1,
+                    bal:bal-50,
+                    show:true,
+                })
+            },1000)
+        }else{
             set({
                 ...stat,
                 ctr:ctr-1,
                 bal:2500,
-                show:true,
                 lose:false,
-                win:true
+                win:true,
+                show:false
             })
-        },1000)
+
+            await spin();
+
+            setTimeout(()=>{
+                set({
+                    ...stat,
+                    ctr:ctr-1,
+                    bal:2500,
+                    show:true,
+                    lose:false,
+                    win:true
+                })
+            },1000)
+        }
     }
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-wht p-20 fade-t pop">
+    return <div className="bg-grn w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-drk p-20 fade-t pop">
         <h4 className="mont txt-al-ce">{head}</h4>
 
-        <img src="./brand/lose.png" alt="lose"/>
+        <img src="./imgClove/lose.png" alt="lose"/>
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
-            <p className="mont txt-wht">{spins.label}</p>
-            <p className="lato txt-wht m-l-auto">{stat.ctr}</p>
+            <p className="mont txt-drk">{bal.label}</p>
+            <p className="lato txt-drk m-l-auto">{window.txt.currency}{stat.bal}</p>
+        </div>
+
+        <div className="flx flx-jc-ce flx-ai-ce w-80">
+            <p className="mont txt-drk">{spins.label}</p>
+            <p className="lato txt-drk m-l-auto">{stat.ctr}</p>
         </div>        
 
-        <button className="mont btn btn-wht" onClick={click}>{btn}</button>
+        <button className="mont btn btn-grn" onClick={click}>{btn}</button>
     </div>
 }
 

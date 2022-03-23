@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="Jackpot Spinner"
+      content=""
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <script type="text/javascript">
@@ -23,31 +23,27 @@
         start:"Merry Christmas",
         pop:{
           start:{
-            head:"WELCOME TO OUR GIVEBACK PROMO",
-            mes:"Holidays are over but giving back gifts and prizes never stop! We have reserved spins for you - Spin to see if you win or lose!",
+            head:"WELCOME TO THE MAGICAL JACKPOT SPINNER",
+            mes:" Magical wild animals, magic and CASH are found in this spinner! We have reserved spins for you - Spin to see if you win or lose!",
             bal:{
-              label:"Elf Points",
+              label:"Bank",
               val:150
             },
             spins:{
               label:"Spins Left",
-              val:2              
+              val:3              
             },
             btn:"Let’s have fun!",
           },
           loss:{
-            head:"Don't lose hope and Try Again!",
-            mes:"You still have spins remaining, try again and maybe you’ll win!",
+            head:"PIRANHAS!",
+            mes:"You encountered piranhas, you almost got bit but you were able to put them back!\n So click the button below and try your luck again",
             btn:"Try Again"
           },
           win:{
-            head:"Give back season Miracle!",
-            mes:"You did it! You won free extra spins, a coles gift card and an Iphone 13. Click one of the buttons to receive the prize you wish to have",
-            btn:"Spin Again!",    
-            fin:{
-              btn1:"Coles Gift Card",
-              btn2:"Iphone 13"
-            }        
+            head:"CONGRATULATIONS!",
+            mes:"You did it! You were able to fish out the magical pot and won $2500. Click one of the buttons to receive the prize you wish to have",
+            btn:"Claim Prize!",    
           }
         },
         currency:"",
@@ -58,54 +54,55 @@
                 name:"Friedrich Donnel Newmann",
                 time:"2 hours ago",
                 mes:"I received the 5 Free Spins!!! Love to play!! I won $131 this weekend thanks so much! ",
-                src:"./brand/user1.png",
+                src:"./imgClove/user1.png",
                 alt:"christ1"
               },
               {
                 name:"Barbara Banisa",
                 time:"15 mins ago",
                 mes:"I won around 1500 with the free spins but then i lost around 700 and withdraw the rest.",
-                src:"./brand/user2.png",
+                src:"./imgClove/user2.png",
                 alt:"christ2"
               },
               {
                 name:"Sandra Lee",
                 time:"10 mins ago",
                 mes:"I won and now I know what to do in the weekend.",
-                src:"./brand/user3.png",
+                src:"./imgClove/user3.png",
                 alt:"christ3"
               },
               {
                 name:"Eliza Goodridge",
                 time:"2 mins ago",
                 mes:"A bit boring! Maybe because i only won $50!!! GIVE ME MORE FREE SPINS!",
-                src:"./brand/user4.png",
+                src:"./imgClove/user4.png",
                 alt:"christ4"
               },
               {
                 name:"Bill Frizzle",
                 time:"30 secs ago",
                 mes:"I used my free spins and won the biggest welcome bonus so i had to use it!",
-                src:"./brand/user5.png",
+                src:"./imgClove/user5.png",
                 alt:"christ5"
               },
               {
                 name:"Jacob Francis",
                 time:"45 mins ago",
                 mes:"I can't believe I finally won something in my 25 years being alive! I won money and more spins I can't believe this!",
-                src:"./brand/user6.png",
+                src:"./imgClove/user6.png",
                 alt:"christ6"
               },
             ]
         },
         main:{
-          head:"Your Free Spins is valid until end of "+today+".",
-          greet:"We have reserved 2 FREE Spins for the 3 winners today!",
-          mes:"Spins is reserved for for 72 hours from you enter this page! We wish you good luck with your spins and thanks for participating!",
+          head:"Your Free Spins are valid until end of "+today+".",
+          greet:"We have reserved 3 FREE Spins for the 3 winners today!",
+          mes:"Spins are reserved for for 72 hours from you enter this page! We wish you good luck with your spins and thanks for participating!",
           congrats:"A total of $3,994 has been won today!"
         },
         terms:"This is a advertisement page done by a third party advertiser and NOT the casino promoted. You must be 18 or older (or the legal age of gambling in your state) to use our page. Also you must accept we use cookies to enrich your experience.",
-        load:"Coles' Give Back season is Here!"
+        load:"THE JACKPOT SPINNER!",
+        loadMes:"This is a great place for earning cash"
       };
 
       window.count = 1;
@@ -135,7 +132,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/CSSRulePlugin.min.js" integrity="sha512-1z2hYE5HWzZW8cAJRhlwT472AGZC3HlJyWYmW3SXG/Qh0S6TFdkYEqJaPwT7eCy9tI4KvwrRVK6IGqtqErpHQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Give Back Spinner</title>
+    <title>Jackpot Spinner</title>
   </head>
   <body class="h-vh ovr-hide bg-img">
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -145,14 +142,14 @@
       function plushLoaded() {
         if (!window.plushExecuted) {
           window.plushExecuted = true;
-          window.Plush && window.Plush.runFlow('https://g.mustangeight.com/', {
+          window.Plush && window.Plush.runFlow('https://g.chasingglitters.com/', {
           'campaign:id': '',
-          'country:locale': 'AU',
+          'country:locale': 'CA',
            });
         }
       };
      </script>
-     <script src="https://g.mustangeight.com/embed.js" onload="setTimeout(plushLoaded, 7500)" async></script>
+     <script src="https://g.chasingglitters.com/embed.js" onload="setTimeout(plushLoaded, 7500)" async></script>
      
   </body>
 </html>

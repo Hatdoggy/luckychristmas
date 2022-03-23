@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react"
-import { hideBg ,delay} from "../func";
+import { hideBg ,delay,short} from "../func";
 
 const {start} = window.txt;
 
@@ -11,19 +11,30 @@ export const BgGrn = (props)=>{
 
     useEffect(() => {
         setTimeout(async()=>{
+            await short();
+            setShow(true)
             await delay();
             set(true)
         },1000)
     }, [])
 
-    return <div className="h-vh pos-rel bg-red flx flx-jc-ce flx-ai-ce startBg over-hide">
-        <img src="./brand/intro-coles.png" alt="coles-t" className="top pos-abs fade-r"/>
-        <img src="./brand/intro-coles.png" alt="coles-b" className="bot pos-abs fade-l"/>
+    return <div className="h-vh pos-rel flx flx-jc-ce flx-ai-ce startBg over-hide">
 
-        <div className="flx flx-col flx-jc-ce flx-ai-ce w-100 h-100 fade z-top strt">
-            <img src="./brand/intro.png" alt="intro" className="w-50 gift fade"/>
-            <h4 className="mont txt-wht w-30 txt-al-ce fade">{window.txt.load}</h4>
-        </div>
+        {show?
+            <div className="flx flx-col flx-jc-ce flx-ai-ce w-100 h-100 fade z-top strt fade">
+                <h2 className="mont txt-wht w-30 txt-al-ce fade brd-ln m-b-2">{window.txt.load}</h2>
+                <img src="./imgClove/travel.png" alt="intro" className="w-20 gift fade"/>
+                <h2 className="mont txt-wht w-30 txt-al-ce fade">{window.txt.loadMes}</h2>
+            </div>
+            :
+            <div className="flx flx-col h-100 flx-jc-ce flx-ai-ce">
+                <img src="./imgClove/img1.png" alt="cnd1" className="fade-r"/>
+                <img src="./imgClove/img2.png" alt="cnd2" className="fade-l m-t-2 m-b-2"/>
+                <img src="./imgClove/img3.png" alt="cnd3" className="fade-r"/>
+            </div>
+        }
+
+
 
     </div>
 }
