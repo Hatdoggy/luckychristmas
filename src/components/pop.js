@@ -1,11 +1,15 @@
 import { spin ,ActionRedirect} from "../func";
+import { useState} from "react";
+import CountUp,{useCountUp } from 'react-countup';
 
 const {start,loss,win} = window.txt.pop;
+const {head,greet,mes,congrats} = window.txt.main;
+const {mes1,mes2,max} = congrats;
 const {bal,spins} = start;
 
 const Start = (props)=>{
 
-    const {stat,set,mob,setMob} =props;
+    const {stat,set,mob,setMob,tot,setT,strt,setStrt,upd} =props;
     const {head,mes,btn} = start;
 
     const click = async()=>{
@@ -23,10 +27,14 @@ const Start = (props)=>{
             },1250)
     }
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-drk p-20 fade-t targ pop">
+    return <div className="bg-grad w-30 h-90 flx flx-col flx-jc-sa flx-ai-ce txt-drk p-20 fade-t targ pop">
         <h4 className="mas txt-al-ce">{head}</h4>
 
         <img src="./imgEaster/greet.png" alt="welcome" id="welcImg"/>
+
+        <p className="mas txt-drk txt-al-ce">
+        <CountUp end={tot} start={strt} duration={2.5} prefix={`${mes1}${window.txt.currency}`} suffix={mes2} onEnd={upd}/>
+        </p>
 
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
@@ -41,19 +49,23 @@ const Start = (props)=>{
         </div>
 
         <button className="btn btn-red mas" onClick={click}>{btn}</button>
-
-    </div>
+    </div>  
 }
 
 const Win = (props)=>{
 
-    const {stat,set} =props;
+    const {stat,set,mob,setMob,tot,setT,strt,setStrt,upd} =props;
     const {head,mes,btn} = win;
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-drk p-20 fade-t pop">
+    return <div className="bg-grad w-30 h-90 flx flx-col flx-jc-sa flx-ai-ce txt-drk p-20 fade-t pop">
         <h4 className="mas txt-al-ce">{head}</h4>
 
         <img src="./imgEaster/winImg.png" alt="win" className="w-50"/>
+
+        <p className="mas txt-drk txt-al-ce">
+        <CountUp end={max} start={strt} duration={2.5} prefix={`${mes1}${window.txt.currency}`} suffix={mes2} onEnd={upd}/>
+        </p>
+
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
@@ -75,7 +87,7 @@ const Win = (props)=>{
 
 const Lose = (props)=>{
 
-    const {stat,set} =props;
+    const {stat,set,mob,setMob,tot,setT,strt,setStrt,upd} =props;
     const {head,mes,btn} = loss;
     
     const click =async()=>{
@@ -126,10 +138,15 @@ const Lose = (props)=>{
         }
     }
 
-    return <div className="bg-grad w-30 h-80 flx flx-col flx-jc-sa flx-ai-ce txt-drk p-20 fade-t pop">
+    return <div className="bg-grad w-30 h-90 flx flx-col flx-jc-sa flx-ai-ce txt-drk p-20 fade-t pop">
         <h4 className="mas txt-al-ce">{head}</h4>
 
         <img src="./imgEaster/loseImg.png" alt="lose"/>
+
+        <p className="mas txt-drk txt-al-ce">
+        <CountUp end={tot} start={strt} duration={2.5} prefix={`${mes1}${window.txt.currency}`} suffix={mes2} onEnd={upd}/>
+        </p>
+
         <p className="lato w-80 txt-al-ce">{mes}</p>
 
         <div className="flx flx-jc-ce flx-ai-ce w-80">
@@ -148,13 +165,13 @@ const Lose = (props)=>{
 
 const Pop = (props)=>{
 
-    const {stat,set,mobile,setMob} =props;
+    const {stat,set,mobile,setMob,tot,setT,strt,setStrt,upd} =props;
     const {start,win,lose} = stat;
 
     return <div className="w-100 h-100 flx flx-jc-ce flx-ai-ce bg-pop fade pos-abs z-top">
-        {win&&<Win stat={stat} set={set}/>}
-        {start&&<Start stat={stat} set={set} mob={mobile} setMob={setMob}/>}
-        {lose&&<Lose stat={stat} set={set}/>}
+        {win&&<Win stat={stat} set={set} tot={tot} setT={setT} strt={strt} setStrt={setStrt} upd={upd}/>}
+        {start&&<Start stat={stat} set={set} mob={mobile} setMob={setMob} tot={tot} setT={setT} strt={strt} setStrt={setStrt} upd={upd}/>}
+        {lose&&<Lose stat={stat} set={set} tot={tot} setT={setT} strt={strt} setStrt={setStrt} upd={upd}/>}
     </div>
 }
 
