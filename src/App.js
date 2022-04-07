@@ -24,12 +24,14 @@ function App() {
     lose:false,
     bal:bal.val,
     ctr:spins.val,
+    clk:false,
   })
 
   useEffect(() => {
     setTimeout(()=>{
       setStat({
         ...stat,
+        clk:true,
         show:true
       })
     },7000)

@@ -1,7 +1,5 @@
 import { Greet } from "./greet"
 import { Svg } from "./svg"
-import { useState,useEffect} from "react"
-import { three } from "../three";
 
 const Terms = ()=>{
 
@@ -16,10 +14,6 @@ const Main = (props)=>{
 
     const {stat,set,mobile,mob,setCom} = props;
 
-    useEffect(() => {
-        three();
-    }, [])
-
     const showCom = ()=>{
         setCom(true);
     }
@@ -30,7 +24,7 @@ const Main = (props)=>{
         :
         <div className="flx flx-col flx-jc-sa flx-ai-ce h-100">
             <div className="w-80 flx flx-jc-strt flx-ai-ce">
-                <img src="./img/comments.svg" alt="comments" className="w-10 cursor com fade-l" onClick={showCom}/>
+                <img id="comsSvg" src="./imgEaster/comments.svg" alt="comments" className="w-10 cursor com fade-l" onClick={showCom}/>
             </div>
             <Svg stat={stat} set={set}/>
             <Terms/>
@@ -39,7 +33,7 @@ const Main = (props)=>{
     <main className="w-100 h-100 flx flx-jc-ce flx-ai-ce">
         <div className="flx flx-col flx-jc-ce flx-ai-ce h-100 w-50">
             <div className="w-80 flx flx-jc-strt flx-ai-ce">
-                <img src="./img/comments.svg" alt="comments" className="w-10 cursor com fade-l" onClick={showCom}/>
+                <img id="comsSvg" src="./imgEaster/comments.svg" alt="comments" className="w-10 cursor com fade-l" onClick={showCom}/>
             </div>
             <Svg stat={stat} set={set}/>
             <Terms/>

@@ -48,9 +48,19 @@
     width: 30%!important;
   }
 
+  #spinBtn{
+    width: 30%!important;
+  }
+
+  #comsSvg{
+    width: 15%;
+  }
+
   .comments{
     justify-content: initial!important;
-    margin-top: 2%;
+    .bg-red{
+      margin-top: 2%!important;
+    }
     overflow-y: scroll;
     .headCom,.comCont{
       width: 90%!important;
@@ -73,14 +83,28 @@
 
 @media (max-width: 481px) {
 
+  #welcImg{
+    width: 50%;
+  }
+
   .gift{
     width: 15%!important;
     margin-bottom: 5%!important;
   }
 
+  #comsSvg{
+    width: 15%;
+  }
+
+  #spinBtn{
+    width: 30%!important;
+  }
+
   .comments{
     justify-content: initial!important;
-    margin-top: 2%;
+    .bg-red{
+      margin-top: 2%!important;
+    }
     overflow-y: scroll;
     .headCom,.comCont{
       width: 90%!important;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@700&family=Mountains+of+Christmas:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Lato:wght@300&display=swap');
 @import "_var";
 @import "_def";
 @import "_struct";
@@ -74,7 +74,7 @@ small {
 }
 
 .top{
-  top: 0;
+  top: -35%;
 }.bot{
   bottom: 0;
 }
@@ -108,19 +108,19 @@ small {
     transform: rotate(0);
   }
   90% {
-    -webkit-transform: rotate(3110deg);
-    -ms-transform: rotate(3110deg);
-    transform: rotate(3110deg);
+    -webkit-transform: rotate(3160deg);
+    -ms-transform: rotate(3160deg);
+    transform: rotate(3160deg);
   }
   95% {
-    -webkit-transform: rotate(3108deg);
-    -ms-transform: rotate(3108deg);
-    transform: rotate(3108deg);
+    -webkit-transform: rotate(3149deg);
+    -ms-transform: rotate(3149deg);
+    transform: rotate(3149deg);
   }
   100% {
-    -webkit-transform: rotate(3109deg);
-    -ms-transform: rotate(3109deg);
-    transform: rotate(3109deg);
+    -webkit-transform: rotate(3150deg);
+    -ms-transform: rotate(3150deg);
+    transform: rotate(3150deg);
   }
 }
 .spinAround2 {
@@ -141,19 +141,19 @@ small {
     transform: rotate(3109deg);
   }
   90% {
-    -webkit-transform: rotate(6314deg);
-    -ms-transform: rotate(6314deg);
-    transform: rotate(6314deg);
+    -webkit-transform: rotate(6400deg);
+    -ms-transform: rotate(6400deg);
+    transform: rotate(6400deg);
   }
   95% {
-    -webkit-transform: rotate(6312deg);
-    -ms-transform: rotate(6312deg);
-    transform: rotate(6312deg);
+    -webkit-transform: rotate(6389deg);
+    -ms-transform: rotate(6389deg);
+    transform: rotate(6389deg);
   }
   100% {
-    -webkit-transform: rotate(6313deg);
-    -ms-transform: rotate(6313deg);
-    transform: rotate(6313deg);
+    -webkit-transform: rotate(6390deg);
+    -ms-transform: rotate(6390deg);
+    transform: rotate(6390deg);
   }
 }
 .spinAround3 {

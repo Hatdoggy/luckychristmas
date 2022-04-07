@@ -50,6 +50,12 @@ const hideBg = ()=>{
     })
 }
 
+const short = ()=>{
+  return new Promise(res=>{
+    setTimeout(res,1500)
+  })
+}
+
 const delay = ()=>{
   return new Promise(res=>{
     setTimeout(res,2000)
@@ -85,4 +91,4 @@ function spin() {
   return ret;
 }
 
-export {ActionRedirect,hideBg,spin,delay}
+export {ActionRedirect,hideBg,spin,delay,short}

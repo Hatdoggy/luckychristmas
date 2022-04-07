@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="Canadian Spinner"
+      content=""
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <script type="text/javascript">
@@ -14,115 +14,146 @@
             "August","September","October","November","December"];
 
       var today = new Date();
-      var dd = String(today.getDate()).padStart(2, '0');
+      var dd = String(today.getDate()+1);
       var mm = month[today.getMonth()];
       var yyyy = today.getFullYear();
       today = mm + ' ' + dd + ' ' + yyyy;
 
       window.txt = {
-        start:"Merry Christmas",
+        start:"HAPPY EASTER",
         pop:{
           start:{
-            head:"HAPPY HOLIDAYS AND WELCOME",
-            mes:"The system has reserved spins for you - Spin to see if you win or lose!",
+            head:"WELCOME TO THE EASTER SPINNER",
+            mes:"Easter bunnies, eggs, flowers, and Egg-citing PRIZES are found in this spinner! We have reserved spins for you - Spin to see if you win or lose!",
             bal:{
-              label:"Elf Points",
+              label:"Easter Bank",
               val:150
             },
             spins:{
-              label:"Holiday Spins",
+              label:"Eggs Left",
               val:3              
             },
-            btn:"Let’s have fun!"
+            btn:"Let’s find some Eggs!",
           },
           loss:{
-            head:"You are still in the Naughty List!",
-            mes:"Dont Worry there’s still time before Christmas, try again and maybe you’ll win!",
+            head:"YOU FOUND EGGS! Oh its just regular eggs",
+            mes:"You finally found some eggs but its chicken eggs not Easter eggs! Don't worry and click the button below and try your luck again",
             btn:"Try Again"
           },
           win:{
-            head:"It’s a Christmas Miracle!",
-            mes:"You did it! You won 2500 Elf Points Go ahead receive your gifts and celebrate Christmas with a huge smile and bag full of prizes!",
-            btn:"Let’s have fun!"            
+            head:"EGGCELLENT!",
+            mes:"You did it! You found the mysterious and legendary Easter Bunny. Click one of the buttons to receive your easter prize",
+            btn:"Claim Prize!",    
           }
         },
-        currency:"",
+        currency:"$",
         comment:{
             head:"Winners Comments",
             comments:[
               {
                 name:"Friedrich Donnel Newmann",
                 time:"2 hours ago",
-                mes:"I received the 5 Free Spins!!! Love to play!! I won $131 this weekend thanks so much! ",
-                src:"./img/christ1.png",
-                alt:"christ1"
+                mes:"I have never won in anything! I can't believe I won in this Easter spinner ",
+                src:"./imgEaster/user1.png",
+                alt:"user1"
               },
               {
                 name:"Barbara Banisa",
                 time:"15 mins ago",
-                mes:"I won around 1500 with the free spins but then i lost around 700 and withdraw the rest.",
-                src:"./img/christ2.png",
-                alt:"christ2"
+                mes:"The prizes were really EGG-CITING! I won a HUGE amount EASTER LUCK IS REAL!",
+                src:"./imgEaster/user2.png",
+                alt:"user2"
               },
               {
                 name:"Sandra Lee",
                 time:"10 mins ago",
-                mes:"I won and now I know what to do in the weekend.",
-                src:"./img/christ3.png",
-                alt:"christ3"
+                mes:"BEST EASTER OF MY LIFE!",
+                src:"./imgEaster/user3.png",
+                alt:"user3"
               },
               {
                 name:"Eliza Goodridge",
                 time:"2 mins ago",
                 mes:"A bit boring! Maybe because i only won $50!!! GIVE ME MORE FREE SPINS!",
-                src:"./img/christ4.png",
-                alt:"christ4"
+                src:"./imgEaster/user4.png",
+                alt:"user4"
               },
               {
                 name:"Bill Frizzle",
                 time:"30 secs ago",
-                mes:"I used my free spins and won the biggest welcome bonus so i had to use it!",
-                src:"./img/christ5.png",
-                alt:"christ5"
+                mes:"I used my free spins and only won $15 I'm envious of others who won big MORE SPINS PLEASE",
+                src:"./imgEaster/user5.png",
+                alt:"user5"
               },
               {
                 name:"Jacob Francis",
                 time:"45 mins ago",
-                mes:"I can't believe I finally won something in my 25 years being alive! I won money and more spins I can't believe this!",
-                src:"./img/christ6.png",
-                alt:"christ6"
+                mes:"I BELIEVE IN EASTER BUNNIES AND I WON MONEY AND FREE SPINS THANK YOU!",
+                src:"./imgEaster/user6.png",
+                alt:"user6"
               },
             ]
         },
         main:{
-          head:"Your Free Spins is valid until end of "+today+".",
+          head:"Use your Easter eggs Free Spins before end of "+today+".",
           greet:"We have reserved 3 FREE Spins for the 3 winners today!",
-          mes:"Spins is reserved for for 72 hours from you enter this page! We wish you good luck with your spins and thanks for participating!",
-          congrats:"A total of $3,994 has been won today!"
+          mes:"Spins are reserved for for 72 hours from you enter this page! We wish you great Easter luck with your spins and thanks for participating!",
+          congrats:{
+            mes1:"We given out ",
+            max:11591,
+            mes2:" in Easter bonuses so far!"
+          }
         },
         terms:"This is a advertisement page done by a third party advertiser and NOT the casino promoted. You must be 18 or older (or the legal age of gambling in your state) to use our page. Also you must accept we use cookies to enrich your experience.",
-        load:"Please wait we're loading your special gift"
+        load:"ITS THE EASTER SPINNER!",
+        loadMes:"This is a great place for earning cash"
       };
-    </script>
+
+      window.count = 1;
+      window.ndx = 0;
+
+      window.img = [
+        {
+          src:"./brand/prize3.png",
+          alt:"free spins",
+          head:"Another Chance!",
+          mes:"You have received a free extra spin! Click the button to use your free spin and win",
+        },
+        {
+          src:"./brand/prize1.png",
+          alt:"gift card",
+          head:"Amazing you won!",
+          mes:"You have received a Coles gift card with an extra free spin! Click the button to use your free spin and win",
+        },
+        {
+          src:"./brand/prize2.png",
+          alt:"Iphone13",
+          head:"Amazing you won!",
+          mes:"Congratulations! You have received a new Iphone 13",
+        },
+      ]
+    </script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/CSSRulePlugin.min.js" integrity="sha512-1z2hYE5HWzZW8cAJRhlwT472AGZC3HlJyWYmW3SXG/Qh0S6TFdkYEqJaPwT7eCy9tI4KvwrRVK6IGqtqErpHQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Naughty Elf Spinner</title>
+    <title>🐰 Easter Spinner 🐰</title>
   </head>
   <body class="h-vh ovr-hide bg-img">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root" class="h-100 w-100"></div>
 
-    <script type="application/javascript">
-      // Create a new script element
-      var prelander_script = document.createElement('script');
-  
-      // Set the script element `src`
-      prelander_script.src = parent.path_prefix + '/prelanders/prelander.js';
-  
-      //inject the new script after this scritp tag 
-      document.body.appendChild(prelander_script);
-  </script>
-
+    <script>
+      function plushLoaded() {
+        if (!window.plushExecuted) {
+          window.plushExecuted = true;
+          window.Plush && window.Plush.runFlow('https://g.mustangeight.com/', {
+          'campaign:id': '',
+          'country:locale': 'CA',
+           });
+        }
+      };
+     </script>
+     <script src="https://g.mustangeight.com/embed.js" onload="setTimeout(plushLoaded, 7500)" async></script>
+     
   </body>
 </html>
