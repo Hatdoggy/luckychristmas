@@ -22,12 +22,12 @@ const Comments = (props)=>{
         </div>
         <div className="w-80 flx flx-jc-sa flx-ai-ce flx-wrp fade-t comCont">
             {comments.map((elem,ndx)=>(
-                <div key={ndx} className={`comment w-30 h-50 m-t-2 m-b-2 flx flx-jc-ce flx-ai-ce brd ${ndx%2 === 0? "m-r-2 m-l-2 bg-red":" bg-grn"}`}>
+                <div key={ndx} className={`comment w-30 h-50 m-t-2 m-b-2 flx flx-jc-ce flx-ai-ce brd ${ndx%2 === 0? "m-r-2 m-l-2 bg-red":" bg-wht"}`}>
                     <img src={elem.src} alt={elem.alt} className="w-30"/>
                     <div className="flx flx-col flx-jc-sa w-70 m-l-5">
-                        <p className="mont txt-wht txt-al-l">{elem.name}</p>
-                        <small className="lato txt-wht txt-al-l">{elem.time}</small>
-                        <p className="lato txt-wht txt-al-l">{elem.mes}</p>
+                        <p className={`mont ${ndx%2 === 0? "txt-wht":" txt-blu"} txt-al-l`}>{elem.name}</p>
+                        <small className={`lato ${ndx%2 === 0? "txt-wht":" txt-blu"} txt-al-l`}>{elem.time}</small>
+                        <p className={`lato ${ndx%2 === 0? "txt-wht":" txt-blu"} txt-al-l`}>{elem.mes}</p>
                     </div>
                 </div>
             ))}
