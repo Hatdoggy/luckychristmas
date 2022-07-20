@@ -18,8 +18,8 @@ function App() {
   const [start, setStart] = useState(false)
   const [mob,setMob] = useState(true);
   const [showCom, setCom] = useState(false);
-  const [tot, setTot] = useState(37);
-  const [strt, setStrt] = useState(0);
+  const [tot, setTot] = useState(7341);
+  const [strt, setStrt] = useState(7304);
 
   const [stat,setStat] = useState({
     show:false,
@@ -47,7 +47,7 @@ function App() {
                 e.update.newEnd = max;
                 e.pauseResume();
             }
-        },3000)
+        },1500)
     }
 
   useEffect(() => {
